@@ -57,7 +57,7 @@ document.getElementById('searchButton').addEventListener('click', async function
         
         countOfRows= resultRow.length;
         const count = countOfRows;
-        avgDivIncome= sum/countOfRows;
+        avgDivIncome= parseInt(sum/countOfRows);
         avgAmntRemt= sala-avgDivIncome;
         avgPm= parseInt(sum2/countOfRows);
         const GST= sala*0.0009;
