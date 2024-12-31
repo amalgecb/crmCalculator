@@ -60,7 +60,7 @@ document.getElementById('searchButton').addEventListener('click', async function
         avgDivIncome= parseInt(sum/countOfRows);
         avgAmntRemt= sala-avgDivIncome;
         avgPm= parseInt(sum2/countOfRows);
-        const GST= sala*0.0009;
+        const GST= sala*0.009;
         const documentationCharge= 236;
         const netPMpayable= avgPm-GST-documentationCharge;
 
