@@ -9,7 +9,7 @@ document.getElementById('searchButton').addEventListener('click', async function
     }
 
     // Fetch data from Google Sheets
-    const apiKey = "AIzaSyAmznsZGKdiNwzKLxhLrQWPnO5qFWxrKmA"; // Replace with your API key
+    const apiKey = ""; // Replace with your API key
     const sheetId = "1p0U5YEABMXtK5XZ3_UXioEdrMFL8rlKqzE8UonJByys"; // Replace with your Google Sheet ID
     const sheetRange1 = "terminated Chit list"; 
     const sheetRange2= "data";// Replace with your sheet name
