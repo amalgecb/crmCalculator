@@ -85,3 +85,12 @@ body {
     text-align: center;
     min-height: 50px;
 }
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
