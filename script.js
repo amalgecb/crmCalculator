@@ -1,90 +1,98 @@
-
-document.getElementById('searchButton').addEventListener('click', async function () {
-    const input1 = document.getElementById('input1').value;
-    const input2 = document.getElementById('input2').value;
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const input1 = document.getElementById('input1');
+    const input2 = document.getElementById('input2');
     const outputDiv = document.getElementById('output');
 
-    if (!input1 || !input2) {
-        outputDiv.innerHTML = "Please enter both inputs.";
-        return;
-    }
-   
-    // Server-side URLs for API calls
-    const url1 = './data.json';
-    const url2 = './data2.json';
-    const url3 = './data3.json';
+    // Function to handle the search functionality
+    async function handleSearch() {
+        const value1 = input1.value;
+        const value2 = input2.value;
 
-    try {
-        const response = await fetch(url1);
-        const response2 = await fetch(url2);
-        const data = await response.json();
-        const data2 = await response2.json();
-        const response3 = await fetch(url3);
-        const data3 = await response3.json();
-        //const rows = data.values;
-        //const rows2 = data2.values;
-        //console.log(data);
-        //console.log(data[1].Pattern);
-        let sum = 0, avgDivIncome = 0, avgAmntRemt, sum2 = 0, avgPm, sala;
-
-        // Find matching row
-        let resultRow = [];
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].Pattern === input1) {
-                resultRow.push(data[i].Pattern);
-                sala = data[i].amnt;
-                duration = data[i].chittal;
-                instalamnt= data[i]["subs amnt"];
-            }
-        }
-        if (resultRow.length === 0) {
-            outputDiv.innerHTML = "No matching data found.";
+        if (!value1 || !value2) {
+            outputDiv.innerHTML = "Please enter both inputs.";
             return;
         }
 
-        for (let i = 0; i < data2.length; i++) {
-            if (data2[i].pattern === input1) {
-                if (data2[i + 1]["Customer Name"] === "Total  :") {
-                    sum += parseInt(data2[i + 1]["Instal Discount"]);
-                }
-                if (data2[i]["Instal No"] === input2) {
-                    sum2 += parseInt(data2[i]["Prize Money"]);
+        // Server-side URLs for API calls
+        const url1 = './data.json';
+        const url2 = './data2.json';
+        const url3 = './data3.json';
+
+        try {
+            const response = await fetch(url1);
+            const response2 = await fetch(url2);
+            const data = await response.json();
+            const data2 = await response2.json();
+            const response3 = await fetch(url3);
+            const data3 = await response3.json();
+
+            let sum = 0,
+                avgDivIncome = 0,
+                avgAmntRemt,
+                sum2 = 0,
+                avgPm,
+                sala;
+
+            // Find matching row
+            let resultRow = [];
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].Pattern === value1) {
+                    resultRow.push(data[i].Pattern);
+                    sala = data[i].amnt;
+                    duration = data[i].chittal;
+                    instalamnt = data[i]["subs amnt"];
                 }
             }
-        }
+            if (resultRow.length === 0) {
+                outputDiv.innerHTML = "No matching data found.";
+                return;
+            }
+            
 
-        const countOfRows = resultRow.length;
-        avgDivIncome = parseInt(sum / countOfRows);
-        avgAmntRemt = sala - avgDivIncome;
-        avgPm = parseInt(sum2 / countOfRows);
-        const GST = parseInt(sala * 0.009);
-        const documentationCharge = 236;
-        const netPMpayable = avgPm - GST - documentationCharge;
-        const fL= instalamnt*(duration-parseInt(input2));
-        const csdtPortion= (fL>netPMpayable) ? netPMpayable  : fL;
-        const fDportion = netPMpayable- csdtPortion;
-        const period = duration-parseInt(input2);
-        var csdtPerc;
-        var fdperc;
-        for (let i= 1; i<data3.length;i++){
-            //console.log(rows[i][12]);
-            if (parseInt(data3[i]["Period in Months"]) === period) {
-                csdtPerc= parseFloat(data3[i]["CSDT"]);
-                fdperc = parseFloat(data3[i]["FD"]);
-                console.log(csdtPerc);
-                console.log(fdperc);
-                break;
+            for (let i = 0; i < data2.length; i++) {
+                
 
-        }
-    }
-        const intFromcsdt= parseInt(csdtPortion*csdtPerc/100/12);
-        const intFromfd= parseInt(fDportion*fdperc/100/12);
-        const totalInt= (intFromcsdt+intFromfd)*period;
-        const totalReturn= totalInt + netPMpayable;
+                if (data2[i].pattern === value1) {
+                    //console.log(data2[i].pattern);
+                    if (data2[i + 1]["Customer Name"] === "Total :") {
+                        sum += parseInt(data2[i + 1]["Instal Discount"]);
+                        //console.log(parseInt(data2[i + 1]["Instal Discount"]));
+                    }
+                    if (data2[i]["Instal No"] === value2) {
+                        sum2 += parseInt(data2[i]["Prize Money"]);
+                    }
+                }
+            }
 
+            const countOfRows = resultRow.length;
+            //console.log(sum);
+            avgDivIncome = parseInt(sum / countOfRows);
+            avgAmntRemt = sala - avgDivIncome;
+            avgPm = parseInt(sum2 / countOfRows);
+            const GST = parseInt(sala * 0.009);
+            const documentationCharge = 236;
+            const netPMpayable = avgPm - GST - documentationCharge;
+            const fL = instalamnt * (duration - parseInt(value2));
+            const csdtPortion = fL > netPMpayable ? netPMpayable : fL;
+            const fDportion = netPMpayable - csdtPortion;
+            const period = duration - parseInt(value2);
+            let csdtPerc;
+            let fdperc;
+            for (let i = 1; i < data3.length; i++) {
+                if (parseInt(data3[i]["Period in Months"]) === period) {
+                    csdtPerc = parseFloat(data3[i]["CSDT"]);
+                    fdperc = parseFloat(data3[i]["FD"]);
+                    break;
+                }
+            }
+            const intFromcsdt = parseInt(csdtPortion * csdtPerc / 100 / 12);
+            const intFromfd = parseInt(fDportion * fdperc / 100 / 12);
+            const totalInt = (intFromcsdt + intFromfd) * period;
+            const totalReturn = totalInt + netPMpayable;
 
-        // Display result
-        outputDiv.innerHTML = `
+            // Display result
+            outputDiv.innerHTML = `
 <div id="general">
     <div><span>No of chits considered :</span><span>${countOfRows}</span></div>
     <div><span>Sala :</span><span>${sala}</span></div>
@@ -106,13 +114,20 @@ document.getElementById('searchButton').addEventListener('click', async function
     <div><span>Total interest :</span><span>${totalInt}</span></div>
     <div><span>Total return :</span><span>${totalReturn}</span></div>
     <div><span>Profit/loss :</span><span>${totalReturn - avgAmntRemt}</span></div>
-</div>
-
-        `;
-        
-    } catch (error) {
-        outputDiv.innerHTML = "Error fetching data.";
-        console.error(error);
+</div>`;
+        } catch (error) {
+            outputDiv.innerHTML = "Error fetching data.";
+            console.error(error);
+        }
     }
-  
+
+    // Add click event listener to the button
+    searchButton.addEventListener('click', handleSearch);
+
+    // Add keydown event listener to the input fields
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    });
 });
