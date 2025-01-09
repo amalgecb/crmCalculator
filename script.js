@@ -44,7 +44,7 @@ document.getElementById('searchButton').addEventListener('click', async function
 
         for (let i = 0; i < data2.length; i++) {
             if (data2[i].pattern === input1) {
-                if (data2[i + 1]["Customer Name"] === "Total :") {
+                if (data2[i + 1]["Customer Name"] === "Total  :") {
                     sum += parseInt(data2[i + 1]["Instal Discount"]);
                 }
                 if (data2[i]["Instal No"] === input2) {
@@ -61,7 +61,7 @@ document.getElementById('searchButton').addEventListener('click', async function
         const documentationCharge = 236;
         const netPMpayable = avgPm - GST - documentationCharge;
         const fL= instalamnt*(duration-parseInt(input2));
-        const csdtPortion= (fL>netPMpayable) ? netPMpayable : fL;
+        const csdtPortion= (fL>netPMpayable) ? netPMpayable  : fL;
         const fDportion = netPMpayable- csdtPortion;
         const period = duration-parseInt(input2);
         var csdtPerc;
@@ -85,22 +85,29 @@ document.getElementById('searchButton').addEventListener('click', async function
 
         // Display result
         outputDiv.innerHTML = `
-            No of chits considered: ${countOfRows}<br>
-            Sala: ${sala}<br>
-            Avg. div Income: ${avgDivIncome}<br>
-            Avg.amnt to be remitted : ${avgAmntRemt} <br>
-            Avg. PM at given instalment: ${avgPm}<br>
-            GST : ${GST} <br>
-            Documentation charge : ${documentationCharge};<br>
-            Net PM payable: ${netPMpayable}<br>
-            Future liability: ${fL} <br>
-            CSDT portion : ${csdtPortion} <br>
-            FD portion : ${fDportion} <br>
-            Monthly interest from CSDT : ${intFromcsdt} <br>
-            Monthly interest from FD : ${intFromfd}<br>
-            Total interest : ${totalInt} <br>
-            Total return : ${totalReturn} <br>
-            Profit/loss : ${totalReturn-avgAmntRemt}
+<div id="general">
+    <div><span>No of chits considered :</span><span>${countOfRows}</span></div>
+    <div><span>Sala :</span><span>${sala}</span></div>
+    <div><span>Avg. div Income :</span><span>${avgDivIncome}</span></div>
+    <div><span>Avg. amount to be remtd :</span><span>${avgAmntRemt}</span></div>
+</div>
+<div id="prizeMoney">
+    <div><span>Avg. PM at given installment :</span><span>${avgPm}</span></div>
+    <div><span>GST :</span><span>${GST}</span></div>
+    <div><span>Documentation charge :</span><span>${documentationCharge}</span></div>
+    <div><span>Net PM payable :</span><span>${netPMpayable}</span></div>
+</div>
+<div id="fD">
+    <div><span>Future liability :</span><span>${fL}</span></div>
+    <div><span>CSDT portion :</span><span>${csdtPortion}</span></div>
+    <div><span>FD portion :</span><span>${fDportion}</span></div>
+    <div><span>Mnthly intrst from CSDT :</span><span>${intFromcsdt}</span></div>
+    <div><span>Mnthly intrst from FD :</span><span>${intFromfd}</span></div>
+    <div><span>Total interest :</span><span>${totalInt}</span></div>
+    <div><span>Total return :</span><span>${totalReturn}</span></div>
+    <div><span>Profit/loss :</span><span>${totalReturn - avgAmntRemt}</span></div>
+</div>
+
         `;
         
     } catch (error) {

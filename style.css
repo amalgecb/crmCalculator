@@ -75,6 +75,7 @@ body {
 }
 
 #calculator #output {
+    font-family: "Roboto", serif;
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #8182ff;
@@ -84,6 +85,73 @@ body {
     font-size: 16px;
     text-align: center;
     min-height: 50px;
+    line-height: 125%;
+}
+#calculator #output span {
+    display: flex;
+    justify-content: space-between; /* Align text before and after ':' */
+    margin-bottom: 8px;
+}
+#general {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    background: #2b2d42;
+    color: #ffffff;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: label and value */
+    row-gap: 8px;
+    column-gap: 20px
+}
+
+#prizeMoney {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    background: #2e2e38;
+    color: #ffffff;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: label and value */
+    row-gap: 8px;
+    column-gap: 20px
+}
+
+#fD {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #f44336;
+    border-radius: 5px;
+    background: #2e2e3e;
+    color: #ffffff;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: label and value */
+    row-gap: 2px;
+    column-gap: 20px
+}
+
+
+#general div,
+#prizeMoney div,
+#fD div {
+    display: contents; /* Ensure proper alignment for the columns */
+}
+
+#general div span:first-child,
+#prizeMoney div span:first-child,
+#fD div span:first-child {
+    text-align: left;
+    font-weight: bold; /* Optional for emphasis */
+}
+
+#general div span:last-child,
+#prizeMoney div span:last-child,
+#fD div span:last-child {
+    text-align: right;
 }
 #loading {
     position: fixed;
