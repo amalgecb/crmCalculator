@@ -121,6 +121,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    async function populateInput2(value1, data4) {
+        // Check if the key exists in the data4 object
+        if (data4.hasOwnProperty(value1)) {
+            const options = data4[value1]; 
+            input2.innerHTML = '';  // Get the options array for the selected ke
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.id;
+                optionElement.textContent = option.name;
+                input2.appendChild(optionElement);
+            });
+        } else {
+            console.error("No matching category found in data4 for value:", value1);
+            outputDiv.innerHTML = "No matching options found for input2.";
+        }
+    }
+    
+ 
     // Add click event listener to the button
     searchButton.addEventListener('click', handleSearch);
 
@@ -130,4 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
             handleSearch();
         }
     });
+
+    input1.addEventListener('change', async () => {
+        const value1 = input1.value;
+        const splittedArray = value1.split("X");
+        const lastPart= splittedArray[1];
+        if (lastPart) {
+            // Call the populateInput2 function to reload options in input2 when input1 changes
+            const response = await fetch('./data4.json');
+            const data4 = await response.json();
+            populateInput2(lastPart, data4);
+        }
+    });
+
 });
