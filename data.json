@@ -11002,5 +11002,521 @@
    "subs amnt": 20000,
    "chittal": 25,
    "amnt": 500000
- }
+ },
+ {
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "10000X60",
+  "subs amnt": 10000,
+  "chittal": 60,
+  "amnt": 600000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "16000X25",
+  "subs amnt": 16000,
+  "chittal": 25,
+  "amnt": 400000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "80000X25",
+  "subs amnt": 80000,
+  "chittal": 25,
+  "amnt": 2000000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "16000X25",
+  "subs amnt": 16000,
+  "chittal": 25,
+  "amnt": 400000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "10000X30",
+  "subs amnt": 10000,
+  "chittal": 30,
+  "amnt": 300000
+},
+{
+  "Pattern": "16000X50",
+  "subs amnt": 16000,
+  "chittal": 50,
+  "amnt": 800000
+},
+{
+  "Pattern": "20000X50",
+  "subs amnt": 20000,
+  "chittal": 50,
+  "amnt": 1000000
+},
+{
+  "Pattern": "16000X50",
+  "subs amnt": 16000,
+  "chittal": 50,
+  "amnt": 800000
+},
+{
+  "Pattern": "75000X40",
+  "subs amnt": 75000,
+  "chittal": 40,
+  "amnt": 3000000
+},
+{
+  "Pattern": "20000X50",
+  "subs amnt": 20000,
+  "chittal": 50,
+  "amnt": 1000000
+},
+{
+  "Pattern": "125000X40",
+  "subs amnt": 125000,
+  "chittal": 40,
+  "amnt": 5000000
+},
+{
+  "Pattern": "50000X40",
+  "subs amnt": 50000,
+  "chittal": 40,
+  "amnt": 2000000
+},
+{
+  "Pattern": "5000X40",
+  "subs amnt": 5000,
+  "chittal": 40,
+  "amnt": 200000
+},
+{
+  "Pattern": "12500X40",
+  "subs amnt": 12500,
+  "chittal": 40,
+  "amnt": 500000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "5000X40",
+  "subs amnt": 5000,
+  "chittal": 40,
+  "amnt": 200000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "12500X40",
+  "subs amnt": 12500,
+  "chittal": 40,
+  "amnt": 500000
+},
+{
+  "Pattern": "50000X40",
+  "subs amnt": 50000,
+  "chittal": 40,
+  "amnt": 2000000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "5000X40",
+  "subs amnt": 5000,
+  "chittal": 40,
+  "amnt": 200000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "16000X25",
+  "subs amnt": 16000,
+  "chittal": 25,
+  "amnt": 400000
+},
+{
+  "Pattern": "80000X25",
+  "subs amnt": 80000,
+  "chittal": 25,
+  "amnt": 2000000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "12500X40",
+  "subs amnt": 12500,
+  "chittal": 40,
+  "amnt": 500000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "5000X40",
+  "subs amnt": 5000,
+  "chittal": 40,
+  "amnt": 200000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "12500X40",
+  "subs amnt": 12500,
+  "chittal": 40,
+  "amnt": 500000
+},
+{
+  "Pattern": "16000X25",
+  "subs amnt": 16000,
+  "chittal": 25,
+  "amnt": 400000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "80000X25",
+  "subs amnt": 80000,
+  "chittal": 25,
+  "amnt": 2000000
+},
+{
+  "Pattern": "50000X40",
+  "subs amnt": 50000,
+  "chittal": 40,
+  "amnt": 2000000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "16000X25",
+  "subs amnt": 16000,
+  "chittal": 25,
+  "amnt": 400000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "25000X40",
+  "subs amnt": 25000,
+  "chittal": 40,
+  "amnt": 1000000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "80000X25",
+  "subs amnt": 80000,
+  "chittal": 25,
+  "amnt": 2000000
+},
+{
+  "Pattern": "5000X40",
+  "subs amnt": 5000,
+  "chittal": 40,
+  "amnt": 200000
+},
+{
+  "Pattern": "12500X40",
+  "subs amnt": 12500,
+  "chittal": 40,
+  "amnt": 500000
+},
+{
+  "Pattern": "20000X25",
+  "subs amnt": 20000,
+  "chittal": 25,
+  "amnt": 500000
+},
+{
+  "Pattern": "8000X25",
+  "subs amnt": 8000,
+  "chittal": 25,
+  "amnt": 200000
+},
+{
+  "Pattern": "10000X60",
+  "subs amnt": 10000,
+  "chittal": 60,
+  "amnt": 600000
+},
+{
+  "Pattern": "40000X25",
+  "subs amnt": 40000,
+  "chittal": 25,
+  "amnt": 1000000
+},
+{
+  "Pattern": "4000X25",
+  "subs amnt": 4000,
+  "chittal": 25,
+  "amnt": 100000
+},
+{
+  "Pattern": "2500X40",
+  "subs amnt": 2500,
+  "chittal": 40,
+  "amnt": 100000
+},
+{
+  "Pattern": "80000X25",
+  "subs amnt": 80000,
+  "chittal": 25,
+  "amnt": 2000000
+}
 ]
