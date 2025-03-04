@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div><span>No of chits considered :</span><span>${countOfRows}</span></div>
     <div><span>Sala :</span><span>${sala}</span></div>
     <div><span>Avg. div Income :</span><span>${avgDivIncome}</span></div>
-    <div><span>Avg. amount to be remtd :</span><span>${avgAmntRemt}</span></div>
+    <div><span>Avg. amount to be remtd :</span><span class= "blink">${avgAmntRemt}</span><span class="secret">Do not reveal to customer</span></div>
 </div>
 <div id="prizeMoney">
     <div><span>Avg. PM at given installment :</span><span>${avgPm}</span></div>
